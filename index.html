@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+            <meta charset="utf-8">
+            <meta name="robots" content="noindex">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="author" content="数学主义" />
+            <meta name="date" content="2022-09-27" />
+        
+
+        <title>2020084号草稿：拓扑学 | </title>
+
+        
+    
+    
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="static/styles.css">
+            <link rel="stylesheet" id="customiseCSS" href="static/light.css">
+            
+            
+        
+    <link rel="stylesheet" id="customiseCodeCSS" href="static/pygmentize.light.css">
+    <link rel="stylesheet" href="static/codemirror-5.26.0/lib/codemirror.css">
+    <link rel="stylesheet" href="static/code.css">
+    <link rel="stylesheet" href="static/numbasEmbed.css">
+
+    <link rel="stylesheet" href="static/bootstrap-toc.css?v=3">
+    <link rel="stylesheet" href="static/print.css">
+
+
+        
+    
+    
+			<script>
+				var chirun_static_url="static/.";
+			</script>
+            <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script defer src="static/mathjax_config.js"></script>
+            <script type="text/javascript" id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <script defer src="static/customisation.js"></script>
+            <script defer src="static/mp4.js"></script>
+            
+            
+			</script>
+        
+    <script defer src="static/jquery.flexibleArea.js"></script>
+    <script defer src="static/spin.min.js"></script>
+    <script defer src="static/codemirror-5.26.0/lib/codemirror.js"></script>
+    <script defer src="static/codemirror-5.26.0/mode/octave/octave.js"></script>
+    <script defer src="static/codemirror-5.26.0/mode/python/python.js"></script>
+    <script defer src="static/codemirror-5.26.0/mode/r/r.js"></script>
+    <script defer src="static/code.js"></script>
+    <script defer src="static/numbasEmbed.js"></script>
+
+    <script defer src="static/bootstrap-toc.js"></script>
+
+    </head>
+    <body data-spy="scroll" data-target="#chapterTOC" data-offset="50">
+        
+<div class="collapse" id="navbarToggleCustomise">
+	<div class="bg-secondary text-white p-3">
+		<form onsubmit="return false;" id="navbarCustomise">
+			<div class="form-row">
+				<label>Theme Customisation</label>
+				<div id="themeSelector" class="form-group col-md-12">
+					<button class="btn btn-dark mr-2" value="dark">Dark</button>
+					<button class="btn btn-pastel mr-2" value="pastel">Pastel</button>
+					<button class="btn btn-light mr-4" value="light">Light</button>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label style="display: block" for="font-scale">Font size (<span id="font-size-display">100%</span>)</label>
+					<input type="range" class="form-control-range col-9 mr-2" id="font-scale" min="50" max="600" value="100">
+					<button id="font-scale-reset" class="btn btn-sm">Reset</button>
+				</div>
+				<div class="form-group col-md-4">
+					<label style="display: block" for="p-space">Spacing (<span id="p-space-display">100%</span>)</label>
+					<input type="range" class="form-control-range col-9 mr-2" id="p-space" min="0" max="600" value="100">
+					<button id="p-space-reset" class="btn btn-sm">Reset</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<button class="navbar-toggler standalone-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleCustomise" aria-controls="navbarToggleCustomise" aria-expanded="false" aria-label="Toggle customisations panel">
+	<span class="fa fa-cog"></span>
+</button>
+
+
+        <header>
+            
+            
+        </header>
+        <main>
+            
+    <div class="container mt-3">
+        <div class="row">
+            
+            <div id="sidebar" class="col-md-3">
+                <nav class="mb-3" id="chapterTOC" data-toggle="toc">
+                    <ul class="nav navbar-nav">
+                        
+                        
+                        
+                    </ul>
+                </nav>
+            </div>
+            <div id="content" class="col-md-9"> 
+            
+            
+<!-- Latex Chapter/Part -->
+<h1 id="a0000000002">2020084号草稿: 拓扑学</h1>
+<p>
+主要是从2022年湖大数院本科拓扑学课程同学们的作业中收集错误解法, 并评论. 亦有收录正确解法. 
+</p>
+<p>
+本文档源代码托管于 <a href="https://github.com/shuxuezhuyi/t2022">https://github.com/shuxuezhuyi/t2022</a>
+</p>
+<section class="section">
+<h2 id="a0000000003">1.1 作业</h2>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000004">
+<div class="thmheading xca_thmheading">
+<span class="thmcaption xca_thmcaption">
+    习题
+    </span>
+<span class="thmlabel xca_thmlabel">1.1</span>
+</div>
+<div class="thmcontent xca_thmcontent">
+<p>
+假设关系<script type="math/tex">V</script>是对称的和传递的, 则因为<script type="math/tex">V</script>是对称的, 所以, 若<script type="math/tex">aVb</script>, 则<script type="math/tex">bVa</script>, 又<script type="math/tex">V</script>是传递的, 由<script type="math/tex">aVb</script>和<script type="math/tex">bVa</script>得<script type="math/tex">aVa</script>, 从而<script type="math/tex">V</script>也是自反的. 请找出上述讨论的错误之处. 
+</p>
+</div>
+</div>
+</p>
+<div class="proof_wrapper" id="a0000000005">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 对称性和传递性只跟<script type="math/tex">V</script>有关, 而自反性需要考查<script type="math/tex">X</script>内所有元素. 上述过程仅仅验证了<script type="math/tex">X</script>中具有对称性和传递性的元素具有自反性. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>完全错误. 单把一个元素拎出来根本没法谈论自反性、对称性、传递性, 没有任何一个元素可以说“具有”这三种性质.  
+</p>
+<div class="proof_wrapper" id="a0000000006">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 不可以, 因为传递性需要3个变量, 即<script type="math/tex">aVb</script>, <script type="math/tex">bVc\rightarrow aVc</script>, 所以该证明过程是错误的. 
+</p>
+</div>
+</div>
+<div class="proof_wrapper" id="a0000000007">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 传递性<script type="math/tex">aVb</script>, <script type="math/tex">bVc</script>, 则<script type="math/tex">aVc</script>, 其中<script type="math/tex">a\neq c</script>. 
+</p>
+</div>
+</div>
+<div class="proof_wrapper" id="a0000000008">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 对称性论断是正确的, 但是传递性论断是无中生有. 此处<script type="math/tex">aVb</script>和<script type="math/tex">bVa</script>实际上只是一个关系而非两个, 因为<script type="math/tex">aVb</script>蕴含<script type="math/tex">bVa</script>, 所以<script type="math/tex">aVb</script>且<script type="math/tex">bVa</script>是不符合传递性至少两个关系的条件的, 因而也得不出<script type="math/tex">aVa</script>. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>传递性没有以上三个回答说的这些限制. 令<script type="math/tex">X=\{ 1\} </script>, <script type="math/tex">V=\{ (1,1)\} </script>, 一样有传递性.  
+</p>
+<div class="proof_wrapper" id="a0000000009">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+<script type="math/tex">X=\{ 1,2,3,4\} </script>, <script type="math/tex">V=\{ (1,2),(2,1),(1,1)\} </script>. <script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>不成立, <script type="math/tex">(2,2)</script>、<script type="math/tex">(3,3)</script>、<script type="math/tex">(4,4)</script>都不在. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>这个<script type="math/tex">V</script>不是传递的, 不构成反例. “<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>不成立”也不对, 因为存在<script type="math/tex">1\in X</script>, 使得<script type="math/tex">1V1</script>; 正确的说法是“‘<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>’不成立”.  
+</p>
+<div class="proof_wrapper" id="a0000000010">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 上述所说的<script type="math/tex">aVb</script>与<script type="math/tex">bVa</script>推至<script type="math/tex">aVa</script>并不是传递性的特征. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>恰恰相反, 这正是由传递性保证的.  
+</p>
+<div class="proof_wrapper" id="a0000000011">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 自反性指对于<script type="math/tex">\forall a\in X</script>, 有<script type="math/tex">(a,a)\in V</script>, 若存在<script type="math/tex">a\in X</script>, <script type="math/tex">\forall b\neq a\in X</script>, 若有<script type="math/tex">b</script>与<script type="math/tex">a</script>无关系, 则上述成立, 则自反性不一定成立. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>表达混乱.  
+</p>
+<div class="proof_wrapper" id="a0000000012">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 只证明了当<script type="math/tex">(a,b)\in V</script>时的自反性, 并未证明对于全集均自反. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>自反是针对<b class="bfseries">关系</b>定义的, 不要对着<b class="bfseries">元素</b>或<b class="bfseries">集合</b>讲自反.  
+</p>
+<div class="proof_wrapper" id="a0000000013">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 对称性是指两元素<script type="math/tex">a,b</script>, 若<script type="math/tex">aVb</script>, 则<script type="math/tex">bVa</script>. 而自反性要求<script type="math/tex">\forall a\in X</script>, 有<script type="math/tex">aVa</script>, 上述讨论无法保证<script type="math/tex">a</script>的任意性. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>未能指明要点. 应当说明为什么<script type="math/tex">a</script>的任意性得不到保证.  
+</p>
+<div class="proof_wrapper" id="a0000000014">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 自反性的证明中对集合中任意一数都必须成立. 若<script type="math/tex">\exists a</script>, 有<script type="math/tex">b</script>与<script type="math/tex">a</script>无关系, 则上述证明不成立. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>集合的元素不一定是“数”. 后面, 考虑<script type="math/tex">X=\{ 1,2\} </script>, <script type="math/tex">V=\{ (1,1),(2,2)\} </script>, 则存在<script type="math/tex">a=1</script>, 有<script type="math/tex">b=2</script>与<script type="math/tex">a</script>无关系, 但不妨碍<script type="math/tex">V</script>是等价关系（恒同关系）.  
+</p>
+<div class="proof_wrapper" id="a0000000015">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 定义中的自反性要求<script type="math/tex">\forall x</script>都有<script type="math/tex">xVx</script>. 若不要求自反性, 一开始可能就不存在<script type="math/tex">y</script>, s.t. <script type="math/tex">xVy</script>, 自然也就没有后续证明. 故原题中的证明只针对存在别的元素与之相关的那些<script type="math/tex">a</script>有<script type="math/tex">aVa</script>, 不能保证<script type="math/tex">\forall a</script>都成立. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>叙述不够简明.  
+</p>
+<div class="proof_wrapper" id="a0000000016">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 不妨设<script type="math/tex">V</script>是<script type="math/tex">X</script>上的一个关系. 设定<script type="math/tex">a</script>为<script type="math/tex">X</script>中的一个元素, 对<script type="math/tex">\forall b\in X</script>, <script type="math/tex">aVb</script>和<script type="math/tex">bVa</script>均不存在, 对于其它<script type="math/tex">X</script>中的元素, <script type="math/tex">V</script>的对称性和传递性仍存在. 显然此时关系<script type="math/tex">V</script>中不存在<script type="math/tex">aVa</script>这一关系, 无法得到自反性. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>叙述不够清晰, 不如直接构造一个具体的反例.  
+</p>
+<div class="proof_wrapper" id="a0000000017">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 自反性要求对<script type="math/tex">X</script>中任意元素<script type="math/tex">a</script>都有<script type="math/tex">aVa</script>成立. 依题目中说法, 只能推出<script type="math/tex">X</script>中部分元素满足<script type="math/tex">aVa</script>. 举例: <script type="math/tex">X=\{ 1,2,3\} </script>, <script type="math/tex">V=\{ (1,2),(2,1),(1,1),(2,2)\} </script>, <script type="math/tex">V</script>是对称的和传递的, 但<script type="math/tex">(3,3)\notin V</script>, 则<script type="math/tex">V</script>在<script type="math/tex">X</script>上不是自反的. 
+</p>
+</div>
+</div>
+<p>
+<b class="bfseries">评：</b>有时候连“部分”元素也没有, 参见下一个回答.  
+</p>
+<div class="proof_wrapper" id="a0000000018">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 错误之处在于无法保证对所有元素<script type="math/tex">a</script>均有<script type="math/tex">aVa</script>. 如非空集<script type="math/tex">A</script>上的空关系显然是对称与传递的, 但不自反. 
+</p>
+</div>
+</div>
+<div class="proof_wrapper" id="a0000000019">
+<div class="proof_heading">
+<span class="proof_caption">
+    答.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ 该说法前提是假设了<script type="math/tex">aVb</script>. 但对于任意<script type="math/tex">a\in X</script>, 不一定存在<script type="math/tex">b\in X</script>使<script type="math/tex">aVb</script>. 故说法错误. 如<script type="math/tex">X=\{ 1,2,3,4,5\} </script>, <script type="math/tex">V=\{ (2,2),(3,3),(4,4)\} </script>. 
+</p>
+</div>
+</div>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000020">
+<div class="thmheading xca_thmheading">
+<span class="thmcaption xca_thmcaption">
+    习题
+    </span>
+<span class="thmlabel xca_thmlabel">1.2</span>
+</div>
+<div class="thmcontent xca_thmcontent">
+<p>
+设<script type="math/tex">S=\{ (x,y)\in \mathbb {R}^{2}:y=x+1</script>且<script type="math/tex">0<x<2\} </script>. 请证明所有包含<script type="math/tex">S</script>的等价关系的交也是等价关系, 并写出这个等价关系的等价类. 
+</p>
+</div>
+</div>
+</p>
+<p>
+证明部分问题较少, 此处从略. 错得多的是写出等价类<script type="math/tex">V</script>, 写法例如: 
+</p>
+<ol class="enumerate" id="a0000000021" style="list-style: none">
+<li id="a0000000022" value="1">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		1.
+	</span>
+<p>
+<script type="math/tex">\{ (x,y)|y=x+1,0<x<2\} \cup \{ (x,y)|y\neq x+1,x\in (0,2)\} \cup \{ (x,y)|y\in \mathbb {R},x\geqslant 2\, \text{或}\, x\leqslant 0\} </script>. 
+</p>
+</li>
+<li id="a0000000023" value="2">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		2.
+	</span>
+<p>
+<script type="math/tex">V[x]=\{ y|y=x+1,0<x<2\} </script>. 
+</p>
+</li>
+<li id="a0000000024" value="3">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		3.
+	</span>
+<p>
+<script type="math/tex">y=\begin{cases}  x+1 &  0<x<2\\ x &  0<x<3\\ x-1 &  1<x<3 \end{cases}</script>
+</p>
+</li>
+<li id="a0000000025" value="4">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		4.
+	</span>
+<p>
+<script type="math/tex">V[x]=\{ y|y\in (0,2),y-x\in \mathbb {Z}\} </script>. 
+</p>
+</li>
+<li id="a0000000026" value="5">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		5.
+	</span>
+<p>
+<script type="math/tex">V[x]=\begin{cases}  S[x]=\{ y\in \mathbb {R}|y=x+1\} , &  \text{当}\, x\in (0,2)\\ \varnothing , &  \text{当}\, x\in (-\infty ,0]\cup [2,+\infty ) \end{cases}</script>
+</p>
+</li>
+<li id="a0000000027" value="6">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		6.
+	</span>
+<p>
+<script type="math/tex">V[x_{1}]=\{ x_{1}+1:x_{1}\in (0,2)\} </script>; <script type="math/tex">V[x_{2}]=\{ x_{2}:x_{2}\in \mathbb {R}\} </script>. 
+</p>
+</li>
+<li id="a0000000028" value="7">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		7.
+	</span>
+<p>
+<script type="math/tex">V[a]=\{ a,a+1\} </script>, <script type="math/tex">a\in (0,2)</script>; <script type="math/tex">V[b]=\{ b\} </script>, <script type="math/tex">b\in \mathbb {R}/(0,2)</script>. 
+</p>
+</li>
+<li id="a0000000029" value="8">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		8.
+	</span>
+<p>
+<script type="math/tex">[x]=\begin{cases}  \{ y|y-x\in \mathbb {Z},0<y<3\} , &  \text{若}\, 0<x<3\\ \{ x\} , &  \text{其他} \end{cases}</script>
+</p>
+</li>
+<li id="a0000000030" value="9">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		9.
+	</span>
+<p>
+当<script type="math/tex">x<0</script>且<script type="math/tex">x>3</script>时<script type="math/tex">[x]=\{ x\} </script>单点集; 当<script type="math/tex">0\leqslant x\leqslant 1</script>时<script type="math/tex">[x]=\{ x,x+1,x+2\} </script>; 当<script type="math/tex">1\leqslant x\leqslant 2</script>时<script type="math/tex">[x]=\{ x-1,x,x+1\} </script>; 当<script type="math/tex">2\leqslant x\leqslant 3</script>时<script type="math/tex">\{ x\} =\{ x-2,x-1,x\} </script>. 
+</p>
+</li>
+<li id="a0000000031" value="10">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		10.
+	</span>
+<p>
+正解: 当<script type="math/tex">x\in (0,1)</script>时<script type="math/tex">V[x]=\{ x,x+1,x+2\} </script>; <script type="math/tex">V[1]=\{ 1,2\} </script>; 当<script type="math/tex">x\in (1,2)</script>时<script type="math/tex">V[x]=\{ x-1,x,x+1\} </script>; <script type="math/tex">V[2]=\{ 1,2\} </script>; 当<script type="math/tex">x\in (2,3)</script>时<script type="math/tex">V[x]=\{ x-2,x-1,x\} </script>; 当<script type="math/tex">x\geqslant 3</script>或<script type="math/tex">x\leqslant 0</script>时<script type="math/tex">V[x]=\{ x\} </script>. 
+</p>
+</li>
+</ol>
+<p>
+ [heading=bibintoc] 
+</p>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+		
+		<footer class="text-muted">
+	<hr>
+	<div class="container">
+		<div class="float-right">
+			<ul style="list-style: none">
+			<li><a href="#">Back to top</a></li>
+			
+			
+			</ul>
+		</div>
+		<p>Generated using <a target="_blank" href="https://github.com/chirun-ncl/chirun">Chirun</a>, written by the E-Learning Unit, School of Mathematics &amp; Statistics, Newcastle University</p>
+		<p>This page last generated: 2022-09-27</p>
+	</div>
+</footer>
+		
+    </body>
+</html>
