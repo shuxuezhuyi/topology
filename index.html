@@ -6,7 +6,7 @@
             <meta name="robots" content="noindex">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta name="author" content="数学主义" />
-            <meta name="date" content="2022-09-27" />
+            <meta name="date" content="2022-10-03" />
         
 
         <title>2020084号草稿：拓扑学 | </title>
@@ -117,15 +117,276 @@
 <!-- Latex Chapter/Part -->
 <h1 id="a0000000002">2020084号草稿: 拓扑学</h1>
 <p>
-主要是从2022年湖大数院本科拓扑学课程同学们的作业中收集错误解法, 并评论. 亦有收录正确解法. 
+主要是从2022年湖大数院本科拓扑学课程同学们的作业中收集错误解法, 并评论. 有时亦抄录正确解法. 
 </p>
 <p>
 本文档源代码托管于 <a href="https://github.com/shuxuezhuyi/t2022">https://github.com/shuxuezhuyi/t2022</a>
 </p>
-<section class="section">
-<h2 id="a0000000003">1.1 作业</h2>
 <p>
-<div class="thmwrapper xca_thmwrapper" id="a0000000004">
+另有网页版: <a href="https://shuxuezhuyi.github.io/topology">https://shuxuezhuyi.github.io/topology</a>
+</p>
+<section class="section">
+<h2 id="a0000000003">1.1 例子</h2>
+<table class="tabular">
+<tr><td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">\mathbf{E}^{n}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">n</script>维欧氏空间, 也记为<script type="math/tex">(\mathbb {R}^{n},\tau _{e})</script>
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">\tau _{t}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="text-align:left"><p>
+ 平凡拓扑
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">\tau _{s}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="text-align:left"><p>
+ 离散拓扑
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">\tau _{f}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="text-align:left"><p>
+ 无穷集<script type="math/tex">X</script>上的余有限拓扑
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="text-align:left"><p>
+<script type="math/tex">\tau _{c}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="text-align:left"><p>
+ 不可数无穷集<script type="math/tex">X</script>上的余可数拓扑
+</p>
+</td>
+</tr>
+</table>
+<p>
+<br/>
+</p>
+<table class="tabular">
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"> </td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+<script type="math/tex">\mathbf{E}^{n}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+<script type="math/tex">(\mathbb {R},\tau _{t})</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+<script type="math/tex">(\mathbb {R},\tau _{s})</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+<script type="math/tex">(\mathbb {R},\tau _{f})</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+<script type="math/tex">(\mathbb {R},\tau _{c})</script>
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+连通 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+道路连通 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+紧致 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ×
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+列紧 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+Hausdorff 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ×
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+<script type="math/tex">C_{1}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"> </td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black"><p>
+<script type="math/tex">C_{2}</script>
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black"><p>
+ ×
+</p>
+</td>
+</tr>
+<tr><td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+可分 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+ × 
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+ ✓
+</p>
+</td>
+<td colspan="" rowspan="" style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px"><p>
+ ×
+</p>
+</td>
+</tr>
+</table>
+</section><section class="section">
+<h2 id="a0000000004">1.2 作业</h2>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000005">
 <div class="thmheading xca_thmheading">
 <span class="thmcaption xca_thmcaption">
     习题
@@ -139,7 +400,7 @@
 </div>
 </div>
 </p>
-<div class="proof_wrapper" id="a0000000005">
+<div class="proof_wrapper" id="a0000000006">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -152,9 +413,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>完全错误. 单把一个元素拎出来根本没法谈论自反性、对称性、传递性, 没有任何一个元素可以说“具有”这三种性质.  
+<b class="bfseries">评：</b>完全错误. 单把一个元素拎出来根本没法谈论自反性、对称性、传递性, 没有任何一个元素可以说“具有”这三种性质. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000006">
+<div class="proof_wrapper" id="a0000000007">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -166,7 +427,7 @@
 </p>
 </div>
 </div>
-<div class="proof_wrapper" id="a0000000007">
+<div class="proof_wrapper" id="a0000000008">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -178,7 +439,7 @@
 </p>
 </div>
 </div>
-<div class="proof_wrapper" id="a0000000008">
+<div class="proof_wrapper" id="a0000000009">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -191,9 +452,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>传递性没有以上三个回答说的这些限制. 令<script type="math/tex">X=\{ 1\} </script>, <script type="math/tex">V=\{ (1,1)\} </script>, 一样有传递性.  
+<b class="bfseries">评：</b>传递性没有以上三个回答说的这些限制. 令<script type="math/tex">X=\{ 1\} </script>, <script type="math/tex">V=\{ (1,1)\} </script>, 一样有传递性. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000009">
+<div class="proof_wrapper" id="a0000000010">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -206,9 +467,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>这个<script type="math/tex">V</script>不是传递的, 不构成反例. “<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>不成立”也不对, 因为存在<script type="math/tex">1\in X</script>, 使得<script type="math/tex">1V1</script>; 正确的说法是“‘<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>’不成立”.  
+<b class="bfseries">评：</b>这个<script type="math/tex">V</script>不是传递的, 不构成反例. “<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>不成立”也不对, 因为存在<script type="math/tex">1\in X</script>, 使得<script type="math/tex">1V1</script>; 正确的说法是“‘<script type="math/tex">\forall x\in X</script>, <script type="math/tex">xVx</script>’不成立”. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000010">
+<div class="proof_wrapper" id="a0000000011">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -221,9 +482,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>恰恰相反, 这正是由传递性保证的.  
+<b class="bfseries">评：</b>恰恰相反, 这正是由传递性保证的. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000011">
+<div class="proof_wrapper" id="a0000000012">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -236,9 +497,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>表达混乱.  
+<b class="bfseries">评：</b>表达混乱. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000012">
+<div class="proof_wrapper" id="a0000000013">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -251,9 +512,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>自反是针对<b class="bfseries">关系</b>定义的, 不要对着<b class="bfseries">元素</b>或<b class="bfseries">集合</b>讲自反.  
+<b class="bfseries">评：</b>自反是针对<b class="bfseries">关系</b>定义的, 不要对着<b class="bfseries">元素</b>或<b class="bfseries">集合</b>讲自反. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000013">
+<div class="proof_wrapper" id="a0000000014">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -266,9 +527,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>未能指明要点. 应当说明为什么<script type="math/tex">a</script>的任意性得不到保证.  
+<b class="bfseries">评：</b>未能指明要点. 应当说明为什么<script type="math/tex">a</script>的任意性得不到保证. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000014">
+<div class="proof_wrapper" id="a0000000015">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -281,9 +542,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>集合的元素不一定是“数”. 后面, 考虑<script type="math/tex">X=\{ 1,2\} </script>, <script type="math/tex">V=\{ (1,1),(2,2)\} </script>, 则存在<script type="math/tex">a=1</script>, 有<script type="math/tex">b=2</script>与<script type="math/tex">a</script>无关系, 但不妨碍<script type="math/tex">V</script>是等价关系（恒同关系）.  
+<b class="bfseries">评：</b>集合的元素不一定是“数”. 后面, 考虑<script type="math/tex">X=\{ 1,2\} </script>, <script type="math/tex">V=\{ (1,1),(2,2)\} </script>, 则存在<script type="math/tex">a=1</script>, 有<script type="math/tex">b=2</script>与<script type="math/tex">a</script>无关系, 但不妨碍<script type="math/tex">V</script>是等价关系（恒同关系）. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000015">
+<div class="proof_wrapper" id="a0000000016">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -296,9 +557,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>叙述不够简明.  
+<b class="bfseries">评：</b>叙述不够简明. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000016">
+<div class="proof_wrapper" id="a0000000017">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -311,9 +572,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>叙述不够清晰, 不如直接构造一个具体的反例.  
+<b class="bfseries">评：</b>叙述不够清晰, 不如直接构造一个具体的反例. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000017">
+<div class="proof_wrapper" id="a0000000018">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -326,9 +587,9 @@
 </div>
 </div>
 <p>
-<b class="bfseries">评：</b>有时候连“部分”元素也没有, 参见下一个回答.  
+<b class="bfseries">评：</b>有时候连“部分”元素也没有, 参见下一个回答. ⬛ 
 </p>
-<div class="proof_wrapper" id="a0000000018">
+<div class="proof_wrapper" id="a0000000019">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -340,7 +601,7 @@
 </p>
 </div>
 </div>
-<div class="proof_wrapper" id="a0000000019">
+<div class="proof_wrapper" id="a0000000020">
 <div class="proof_heading">
 <span class="proof_caption">
     答.
@@ -353,7 +614,7 @@
 </div>
 </div>
 <p>
-<div class="thmwrapper xca_thmwrapper" id="a0000000020">
+<div class="thmwrapper xca_thmwrapper" id="a0000000021">
 <div class="thmheading xca_thmheading">
 <span class="thmcaption xca_thmcaption">
     习题
@@ -370,8 +631,8 @@
 <p>
 证明部分问题较少, 此处从略. 错得多的是写出等价类<script type="math/tex">V</script>, 写法例如: 
 </p>
-<ol class="enumerate" id="a0000000021" style="list-style: none">
-<li id="a0000000022" value="1">
+<ol class="enumerate" id="a0000000022" style="list-style: none">
+<li id="a0000000023" value="1">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		1.
 	</span>
@@ -379,7 +640,7 @@
 <script type="math/tex">\{ (x,y)|y=x+1,0<x<2\} \cup \{ (x,y)|y\neq x+1,x\in (0,2)\} \cup \{ (x,y)|y\in \mathbb {R},x\geqslant 2\, \text{或}\, x\leqslant 0\} </script>. 
 </p>
 </li>
-<li id="a0000000023" value="2">
+<li id="a0000000024" value="2">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		2.
 	</span>
@@ -387,7 +648,7 @@
 <script type="math/tex">V[x]=\{ y|y=x+1,0<x<2\} </script>. 
 </p>
 </li>
-<li id="a0000000024" value="3">
+<li id="a0000000025" value="3">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		3.
 	</span>
@@ -395,7 +656,7 @@
 <script type="math/tex">y=\begin{cases}  x+1 &  0<x<2\\ x &  0<x<3\\ x-1 &  1<x<3 \end{cases}</script>
 </p>
 </li>
-<li id="a0000000025" value="4">
+<li id="a0000000026" value="4">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		4.
 	</span>
@@ -403,7 +664,7 @@
 <script type="math/tex">V[x]=\{ y|y\in (0,2),y-x\in \mathbb {Z}\} </script>. 
 </p>
 </li>
-<li id="a0000000026" value="5">
+<li id="a0000000027" value="5">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		5.
 	</span>
@@ -411,7 +672,7 @@
 <script type="math/tex">V[x]=\begin{cases}  S[x]=\{ y\in \mathbb {R}|y=x+1\} , &  \text{当}\, x\in (0,2)\\ \varnothing , &  \text{当}\, x\in (-\infty ,0]\cup [2,+\infty ) \end{cases}</script>
 </p>
 </li>
-<li id="a0000000027" value="6">
+<li id="a0000000028" value="6">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		6.
 	</span>
@@ -419,7 +680,7 @@
 <script type="math/tex">V[x_{1}]=\{ x_{1}+1:x_{1}\in (0,2)\} </script>; <script type="math/tex">V[x_{2}]=\{ x_{2}:x_{2}\in \mathbb {R}\} </script>. 
 </p>
 </li>
-<li id="a0000000028" value="7">
+<li id="a0000000029" value="7">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		7.
 	</span>
@@ -427,7 +688,7 @@
 <script type="math/tex">V[a]=\{ a,a+1\} </script>, <script type="math/tex">a\in (0,2)</script>; <script type="math/tex">V[b]=\{ b\} </script>, <script type="math/tex">b\in \mathbb {R}/(0,2)</script>. 
 </p>
 </li>
-<li id="a0000000029" value="8">
+<li id="a0000000030" value="8">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		8.
 	</span>
@@ -435,7 +696,7 @@
 <script type="math/tex">[x]=\begin{cases}  \{ y|y-x\in \mathbb {Z},0<y<3\} , &  \text{若}\, 0<x<3\\ \{ x\} , &  \text{其他} \end{cases}</script>
 </p>
 </li>
-<li id="a0000000030" value="9">
+<li id="a0000000031" value="9">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		9.
 	</span>
@@ -443,7 +704,7 @@
 当<script type="math/tex">x<0</script>且<script type="math/tex">x>3</script>时<script type="math/tex">[x]=\{ x\} </script>单点集; 当<script type="math/tex">0\leqslant x\leqslant 1</script>时<script type="math/tex">[x]=\{ x,x+1,x+2\} </script>; 当<script type="math/tex">1\leqslant x\leqslant 2</script>时<script type="math/tex">[x]=\{ x-1,x,x+1\} </script>; 当<script type="math/tex">2\leqslant x\leqslant 3</script>时<script type="math/tex">\{ x\} =\{ x-2,x-1,x\} </script>. 
 </p>
 </li>
-<li id="a0000000031" value="10">
+<li id="a0000000032" value="10">
 <span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
 		10.
 	</span>
@@ -453,7 +714,227 @@
 </li>
 </ol>
 <p>
- [heading=bibintoc] 
+<div class="thmwrapper rem_thmwrapper" id="a0000000033">
+<div class="thmheading rem_thmheading">
+<span class="thmcaption rem_thmcaption">
+    注
+    </span>
+<span class="thmlabel rem_thmlabel">1.3</span>
+</div>
+<div class="thmcontent rem_thmcontent">
+<p>
+我觉得题目改成<script type="math/tex">S=\{ (x,y)\in \mathbb {R}^{2}:y=x+1\} </script>更好, 可以减少（我觉得没必要的）计算量. 
+</p>
+</div>
+</div>
+</p>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000034">
+<div class="thmheading xca_thmheading">
+<span class="thmcaption xca_thmcaption">
+    习题
+    </span>
+<span class="thmlabel xca_thmlabel">1.4</span>
+</div>
+<div class="thmcontent xca_thmcontent">
+<p>
+设<script type="math/tex">(X,T)</script>是拓扑空间, 而<script type="math/tex">X^{*}</script>是<script type="math/tex">X</script>和另一点<script type="math/tex">*\notin X</script>的并集. 令<script type="math/tex">T^{*}=T\cup \{ X^{*}\} </script>. 证明: <script type="math/tex">(X^{*},T^{*})</script>是拓扑空间. 
+</p>
+</div>
+</div>
+</p>
+<div class="proof_wrapper" id="a0000000035">
+<div class="proof_heading">
+<span class="proof_caption">
+    Proof.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+<script type="math/tex">\because </script> (1) <script type="math/tex">\because (X,T)</script>为拓扑空间 
+</p>
+<p>
+<script type="math/tex">\therefore \varnothing \in T</script>, <script type="math/tex">\therefore \varnothing ,X^{*}\in T^{*}</script>. 
+</p>
+<p>
+(2) <script type="math/tex">\forall A,B\in T^{*}</script>, 
+</p>
+<p>
+(a) <script type="math/tex">A,B\in T</script>, 则<script type="math/tex">A\cap B\in T\subset T^{*}</script>; 
+</p>
+<p>
+(b) <script type="math/tex">A,B\in \{ X^{*}\} </script>, 则<script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script>; 
+</p>
+<p>
+(c) 若<script type="math/tex">A\in T</script>, <script type="math/tex">B\in X^{*}</script>, 则<script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script>. 
+</p>
+<p>
+<script type="math/tex">\therefore A\cap B\in T^{*}</script>. 
+</p>
+<p>
+(3) <script type="math/tex">\forall \alpha \in I</script>, <script type="math/tex">A_{\alpha }\in T</script>. 
+</p>
+<p>
+<script type="math/tex">\forall x\in \bigcup _{\alpha \in I}A_{\alpha }</script>, 则<script type="math/tex">\exists \alpha _{0}\in I</script>, <script type="math/tex">x\in A_{\alpha _{0}}\in T^{*}</script>, <script type="math/tex">\therefore X\in T</script>或<script type="math/tex">X\in \{ X^{*}\} </script>. 
+</p>
+<p>
+<script type="math/tex">X\in T\cup \{ X^{*}\} </script>, 即<script type="math/tex">\bigcup _{\alpha \in I}A_{\alpha }\subset T\cup \{ X^{*}\} =T^{*}</script>. 
+</p>
+<p>
+<script type="math/tex">\therefore (X^{*},T^{*}\} </script>是拓扑空间. 
+</p>
+</div>
+</div>
+<div class="proof_wrapper" id="a0000000036">
+<div class="proof_heading">
+<span class="proof_caption">
+    先来个语文改进版.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+ (1) 因为<script type="math/tex">(X,T)</script>是拓扑空间, 所以<script type="math/tex">\varnothing \in T</script>, 从而<script type="math/tex">\varnothing \in T^{*}</script>. 另外, 由定义知<script type="math/tex">X^{*}\in T^{*}</script>. 
+</p>
+<p>
+(2) 设<script type="math/tex">A,B\in T^{*}</script>, 有三种可能: 
+</p>
+<p>
+(2a) 若<script type="math/tex">A,B\in T</script>, 则<script type="math/tex">A\cap B\in T\subset T^{*}</script>; 
+</p>
+<p>
+(2b) 若<script type="math/tex">A,B\in \{ X^{*}\} </script>, 则<script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script>; 
+</p>
+<p>
+(2c) 若<script type="math/tex">A</script>与<script type="math/tex">B</script>恰有一个属于<script type="math/tex">T</script>, 不妨设<script type="math/tex">A\in T</script>且<script type="math/tex">B\in X^{*}</script>, 则<script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script>. 
+</p>
+<p>
+因此, 总有<script type="math/tex">A\cap B\in T^{*}</script>. 
+</p>
+<p>
+(3) 任取集族<script type="math/tex">\{ A_{\alpha }\in T^{*}:\alpha \in I\} </script>. 设<script type="math/tex">x\in \bigcup _{\alpha \in I}A_{\alpha }</script>, 则存在<script type="math/tex">\alpha _{0}\in I</script>使得<script type="math/tex">x\in A_{\alpha _{0}}\in T^{*}</script>. 于是<script type="math/tex">x\in T</script>或<script type="math/tex">x\in \{ X^{*}\} </script>, 从而<script type="math/tex">x\in T\cup \{ X^{*}\} </script>. 由此可见 
+</p>
+<span class="dmath"><script type="math/tex; mode=display">\bigcup _{\alpha \in I}A_{\alpha }\subset T\cup \{ X^{*}\} =T^{*}.</script></span>
+<p>
+综上所述, 可知<script type="math/tex">(X^{*},T^{*})</script>是拓扑空间. 
+</p>
+</div>
+</div>
+<p>
+<p>
+<b class="bfseries">评：</b>这道题做错的同学不少, 基本上都是错在把<b class="bfseries">集合</b>与<b class="bfseries">集族</b>搞混淆、把<b class="bfseries">属于</b>和<b class="bfseries">包含</b>搞混淆、把单个元素<script type="math/tex">*</script>跟由这一个元素构成的集合<script type="math/tex">\{ *\} </script>搞混淆. 为了检查证明中的问题, 只要拿一个具体的例子去验证即可: 考虑拓扑空间<script type="math/tex">(X_{1},T_{1})</script>, 其中<script type="math/tex">X_{1}=\{ 1\} </script>, <script type="math/tex">T_{1}=\{ \varnothing ,X_{1}\} </script>; 取<script type="math/tex">*=i</script>, 从而<script type="math/tex">X_{1}^{*}=\{ 1,i\} </script>, <script type="math/tex">T_{1}^{*}=\{ \varnothing ,\{ 1\} ,\{ 1,i\} \} </script>. 
+</p>
+<p>
+“(2b) 若<script type="math/tex">A,B\in \{ X^{*}\} </script>, 则<span style="color:#0000FF"> <script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script></span>”应改为“(2b) 若<script type="math/tex">A,B\in \{ X^{*}\} </script>, 则<span style="color:#FF0000"> <script type="math/tex">A\cap B=X^{*}\in T^{*}</script></span>”. 集合<script type="math/tex">\{ X^{*}\} </script>只有一个元素, 那就是<script type="math/tex">X^{*}</script>; 因此, 若<script type="math/tex">A,B\in \{ X^{*}\} </script>, 则只能<script type="math/tex">A=B=X^{*}</script>. 
+</p>
+<p>
+另外, <script type="math/tex">T^{*}</script>是一个集族, 已知<script type="math/tex">X^{*}</script> <span style="color:#FF0000">属于</span> <script type="math/tex">T^{*}</script>, 我们不知道<script type="math/tex">T^{*}</script>会不会<span style="color:#FF0000">包含</span> <script type="math/tex">X^{*}</script>. 但这里需要的不是<script type="math/tex">X^{*}\subset T^{*}</script>, 而是<script type="math/tex">X^{*}\in T^{*}</script>. 一般来说, 不能指望<script type="math/tex">T^{*}</script>包含<script type="math/tex">X^{*}</script>, 例如开头的例子, <script type="math/tex">X_{1}^{*}</script>就不是<script type="math/tex">T_{1}^{*}</script>的子集, 因为<script type="math/tex">1</script>和<script type="math/tex">i</script>都不是<script type="math/tex">T_{1}^{*}</script>的元素. 但有时候<script type="math/tex">X^{*}</script>也有可能是<script type="math/tex">T^{*}</script>的子集, 例如考虑<script type="math/tex">X_{2}=\{ \varnothing \} </script>与<script type="math/tex">T_{2}=\{ \varnothing ,\{ \varnothing \} \} </script>, 取<script type="math/tex">*=X_{2}=\{ \varnothing \} </script>, 则<script type="math/tex">*\notin X_{2}</script>; 此时<script type="math/tex">X_{2}^{*}=X_{2}\cup \{ *\} =\{ \varnothing ,\{ \varnothing \} \} </script>, 而<script type="math/tex">T_{2}^{*}=T_{2}\cup \{ X_{2}^{*}\} =\{ \varnothing ,\{ \varnothing \} ,\{ \varnothing ,\{ \varnothing \} \} \} </script>, 这样就有<script type="math/tex">X_{2}^{*}\subset T_{2}^{*}</script>啦. 
+</p>
+<p>
+“(2c)……不妨设<script type="math/tex">A\in T</script>且<span style="color:#0000FF"> <script type="math/tex">B\in X^{*}</script></span>, 则<span style="color:#0000FF"> <script type="math/tex">A\cap B=X^{*}\subset T^{*}</script>或<script type="math/tex">A\cap B=\varnothing \subset T^{*}</script></span>”应改为“(2c)……不妨设<script type="math/tex">A\in T</script>且 <span style="color:#FF0000"><script type="math/tex">B=X^{*}</script></span>, 那么由<script type="math/tex">A\subset X^{*}</script>可知<span style="color:#FF0000"> <script type="math/tex">A\cap B=A\in T\subset T^{*}</script></span>”. 
+</p>
+<p>
+(3)的证明目标应当是<script type="math/tex">\bigcup A_{\alpha }\, {\color{red}\in }\, T^{*}</script>, 而不是<script type="math/tex">\bigcup A_{\alpha }\subset T^{*}</script>. 这一点搞错之后, 接下来整个证明路线都错了. 不管证明路线, 单看各步骤, 仍有错误, 用<script type="math/tex">(X_{1},T_{1})</script>举例就会使错误变得更加显著: “取两个集合<script type="math/tex">A_{1},A_{2}\in T_{1}^{*}</script>组成集族, 其中<script type="math/tex">A_{1}=\{ 1\} </script>, <script type="math/tex">A_{2}=\{ 1,i\} </script>; 取<script type="math/tex">x=i\in A_{1}\cup A_{2}</script>, 则<script type="math/tex">i\in A_{2}\in T_{1}^{*}</script>. 于是<span style="color:#0000FF"> <script type="math/tex">i\in T_{1}</script>或<script type="math/tex">i\in \{ X_{1}^{*}\} </script></span>, 从而<span style="color:#0000FF"> <script type="math/tex">i\in T_{1}\cup \{ X_{1}^{*}\} </script></span>. 由此可见<script type="math/tex">A_{1}\cup A_{2}=</script> <span style="color:#0000FF"><script type="math/tex">\{ 1,i\} \subset T_{1}^{*}</script></span>.” 具体怎么错, 就请读者自行感受了. ⬛
+</p>
+</p>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000037">
+<div class="thmheading xca_thmheading">
+<span class="thmcaption xca_thmcaption">
+    习题
+    </span>
+<span class="thmlabel xca_thmlabel">1.5</span>
+</div>
+<div class="thmcontent xca_thmcontent">
+<p>
+指出下列证明过程中的不正确之处: 设<script type="math/tex">\{ A_{a}\} </script>是<script type="math/tex">X</script>的子集族, <script type="math/tex">\forall x\in \overline{\cup A_{a}}</script>, 有<script type="math/tex">x</script>的任意邻域<script type="math/tex">U</script>与<script type="math/tex">\cup A_{a}</script>相交为非空. 从而存在某个<script type="math/tex">A_{a}</script>, s.t. <script type="math/tex">U\cap A_{a}\neq \varnothing </script>, 即<script type="math/tex">x\in \overline{A_{a}}</script>. 
+</p>
+</div>
+</div>
+</p>
+<p>
+<div class="thmwrapper rem_thmwrapper" id="a0000000038">
+<div class="thmheading rem_thmheading">
+<span class="thmcaption rem_thmcaption">
+    注
+    </span>
+<span class="thmlabel rem_thmlabel">1.6</span>
+</div>
+<div class="thmcontent rem_thmcontent">
+<p>
+题目给出的这段证明, 本身表达就有很多问题, 但同学们视而不见, 也许可以修改一下让同学们关心的关键的逻辑错误更加突出: “设<script type="math/tex">\{ A_{a}\} </script>是<script type="math/tex">X</script>的子集族, 而<script type="math/tex">x\in \overline{\cup A_{a}}</script>, 那么<script type="math/tex">x</script>的任一邻域<script type="math/tex">U</script>都与<script type="math/tex">\cup A_{a}</script>相交非空, 于是存在某个<script type="math/tex">A_{a}</script>使得<script type="math/tex">U\cap A_{a}\neq \varnothing </script>, 从而由<script type="math/tex">U</script>的任意性可知<script type="math/tex">x\in \overline{A_{a}}</script>, 故<script type="math/tex">x\in \bigcup \overline{A_{a}}</script>. 由此可见<script type="math/tex">\overline{\cup A_{a}}\subset \bigcup \overline{A_{a}}</script>.” 
+</p>
+</div>
+</div>
+</p>
+<p>
+<div class="thmwrapper xca_thmwrapper" id="a0000000039">
+<div class="thmheading xca_thmheading">
+<span class="thmcaption xca_thmcaption">
+    习题
+    </span>
+<span class="thmlabel xca_thmlabel">1.7</span>
+</div>
+<div class="thmcontent xca_thmcontent">
+<p>
+其它零星错误: 
+</p>
+<ol class="enumerate" id="a0000000040" style="list-style: none">
+<li id="a0000000041" value="1">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		1.
+	</span>
+<div class="proof_wrapper" id="a0000000042">
+<div class="proof_heading">
+<span class="proof_caption">
+    Proof.
+    </span>
+</div>
+<div class="proof_content">
+<p>
+若<script type="math/tex">x\in (A\cup B)'</script>
+</p>
+<p>
+<script type="math/tex">\Rightarrow \forall U\in N(x)</script>, <script type="math/tex">U\cap ((A\cup B)-\{ x\} )\neq \varnothing </script>
+</p>
+<p>
+<script type="math/tex">\Rightarrow U\cap ((A-\{ x\} )\cup (B-\{ x\} ))\neq \varnothing </script>
+</p>
+<p>
+<script type="math/tex">\Rightarrow (U\cap (A-\{ x\} ))\cup (U\cap (B-\{ x\} ))\neq \varnothing </script>
+</p>
+<p>
+<script type="math/tex">\Rightarrow x\in A'</script>或<script type="math/tex">x\in B'\Rightarrow x\in A'\cup B'\Rightarrow (A\cup B)'\subset A'\cup B'</script>. 
+</p>
+</div>
+</div>
+</li>
+<li id="a0000000043" value="2">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		2.
+	</span>
+<p>
+构造拓扑空间忘了带上空集, 例如以为<script type="math/tex">\{ X,\{ a\} \} </script>是<script type="math/tex">X=\{ a,b,c\} </script>的一个拓扑. 
+</p>
+</li>
+<li id="a0000000044" value="3">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		3.
+	</span>
+<p>
+“反例”的英文是counterexample, 不是non-example. 
+</p>
+</li>
+<li id="a0000000045" value="4">
+<span style="transform: translateX(-100%);padding-right: 10px;position: absolute;">
+		4.
+	</span>
+<p>
+“任给<script type="math/tex">x\in \overline{A}-\overline{B}</script>, 则任意包含<script type="math/tex">x</script>的开集<script type="math/tex">U</script>都与<script type="math/tex">A</script>相交”不能写成“Any <script type="math/tex">x\in \overline{A}-\overline{B}</script>, and any open set <script type="math/tex">U</script> containg <script type="math/tex">x</script> intersect <script type="math/tex">A</script>.” 可以写成“<span style="color:#FF0000">Let</span> <script type="math/tex">x\in \overline{A}-\overline{B}</script>. <span style="color:#FF0000">Then</span> any open set <script type="math/tex">U</script> containing <script type="math/tex">x</script> intersect<span style="color:#FF0000">s</span> <script type="math/tex">A</script>.” 
+</p>
+</li>
+</ol>
+</div>
+</div>
 </p>
 </section>
 
@@ -474,7 +955,7 @@
 			</ul>
 		</div>
 		<p>Generated using <a target="_blank" href="https://github.com/chirun-ncl/chirun">Chirun</a>, written by the E-Learning Unit, School of Mathematics &amp; Statistics, Newcastle University</p>
-		<p>This page last generated: 2022-09-27</p>
+		<p>This page last generated: 2022-10-03</p>
 	</div>
 </footer>
 		
